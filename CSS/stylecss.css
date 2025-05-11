@@ -1,0 +1,277 @@
+:root {
+    --primary: #96b83d;
+    --secondary: #fffffa;
+    --border: #faf9ec;
+    --text: #000;
+    --star: #ffdd00;
+}
+
+* /*reset*/ {
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--secondary);
+    font-family: "Noto Serif JP", serif;
+}
+
+
+/* Navigation */
+.navbar{
+    background-color: #96b83d;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    box-shadow: 0 1px 10px #7c7c7c;
+}
+
+.navbar .navigation{
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+.navbar .navigation a{
+    margin: 40px;
+    text-decoration: none;
+    color: var(--secondary);
+    position: relative;
+}
+
+.navbar .navigation a::after{
+    content: '';
+    height: 1px;
+    width: 0;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    left: 0px;
+    transition: 0.2s;
+} 
+
+.navbar .navigation a:hover::after{
+    background-color: var(--secondary);
+    width: 100%;
+}
+
+/* Extra Navigation */
+.extra-navigation{
+    display: flex;
+    gap: 40px;
+    margin-right: 50px;   
+}
+
+.extra-navigation a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.extra-navigation .heart1{
+    border: 2px solid var(--secondary);
+    background-color: var(--secondary);
+    border-radius: 100%;
+    text-align: center;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.extra-navigation .contact{
+    border: 2px solid var(--secondary);
+    background-color: var(--secondary);
+    padding: 5px;
+    width: 130px;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.extra-navigation .heart1 i{
+    color: var(--primary);
+}
+
+.extra-navigation .heart1:hover i{
+    color: var(--secondary);
+}
+
+.extra-navigation .heart1:hover {
+    background-color: var(--primary);
+}
+
+.extra-navigation .contact a{
+    color: var(--primary);
+}
+
+.extra-navigation .contact:hover a{
+    color: var(--secondary);
+}
+
+.extra-navigation .contact:hover {
+    background-color: var(--primary);
+}
+
+
+/* first body */
+.body1{
+    padding: 90px;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.body1 .bigtitle{
+    width: 100%;
+    margin-left: 8%;
+    padding-top: 10%;
+}
+
+.body1 .bigtitle h1{
+    font-size: 55px;
+}
+
+.body1 .blockborder1{
+    width: 337px;
+    height: 490px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border: 1px solid var(--text);
+    position: absolute;
+    z-index: -2;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+.body1 .block1{
+    width: 337px;
+    height: 490px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    background-color: var(--primary);
+    position: absolute;
+    z-index: -1;
+}
+
+.body1 .trusted{
+    margin-left: 10%;
+    padding-top: 12%;
+}
+
+.body1 .trusted .percent{
+    display: flex;
+    font-size: 48px;
+    color: var(--primary);
+}
+
+.body1 .trusted p{
+    width: 80%;
+}
+
+.body1 .trusted .buynow{
+    margin-top: 45px;
+    width: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    background: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.trusted .buynow:hover{
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+
+/* second body */
+.body2{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--primary));
+}
+
+.body2 .titlebody{
+    display: flex;
+    justify-content: space-between;
+}
+
+.body2 .titlebody h1{ /*transparent the font so its like a mask :D*/
+    position: static;   
+    font-size: 130px;
+    margin-top: -6.4rem;
+    color: transparent;
+    background-image: linear-gradient(to bottom, var(--primary) 55%, var(--secondary) 50%);
+    -webkit-background-clip: text;
+}
+
+.body2 .titlebody p{
+    width: 100%;
+    font-size: 14px;
+    color: var(--secondary);
+}
+
+.body2 .maincontainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 20rem));
+    gap: 100px;
+}
+
+.body2 .favorite{
+    padding: 70px 120px;
+}
+
+.body2 .favorite h3{
+    font-size: 35px;
+    color: var(--secondary);
+    padding-bottom: 2%;
+}
+
+.body2 .favorite .container{
+    width: auto;
+    background-color: var(--secondary);
+    padding: 30px 20px;
+    border: 2px solid var(--border);
+    box-shadow: 0 2px 5px #7c7c7c;
+    border-radius: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.body2 .favorite .container:hover{
+    transition: 0.5s;
+    transform: translateY(-5px);
+}
+
+
+.body2 .favorite .container h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.body2 .favorite .container p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.body2 .favorite .container .names{
+    display: flex;
+    justify-content: space-between;
+}
+
+.body2 .favorite .container .names i{
+    font-size: 30px;
+    color: #aeaeae;
+}
+
+.body2 .favorite .container .stars{
+    color: var(--star);
+}
